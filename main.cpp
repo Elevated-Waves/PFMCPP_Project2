@@ -107,7 +107,7 @@ int subtraction(int num1, int num2 = 4)
 /*
  2)
  */
-bool identifyChord(char chordName, bool quality, int extensions)
+bool identifyChord(char chordName, bool quality, int extensions = 13)
 {
     ignoreUnused(chordName, quality, extensions);
     return {};
@@ -154,7 +154,7 @@ double buyClothes(int price = 6, bool typeOfClothing = true)
 /*
  8)
  */
-bool makeSportsTeam(int numberOfPlayers, bool typeOfSport)
+bool makeSportsTeam(bool typeOfSport, int numberOfPlayers = 11)
 {
     ignoreUnused(numberOfPlayers, typeOfSport);
     return {};
@@ -185,19 +185,19 @@ int main()
     //2)
     auto addUp = addition(8);
     //3)
-    auto soccerTeam = makeSportsTeam(11, true);
+    auto soccerTeam = makeSportsTeam(true);
     //4)
     auto casualClothes = buyClothes(12, false);
     //5)
     auto dorianScale = writeScale(4, 3);
     //6)
-    auto bloodTest = analyzeBlood('o', 45);
+    auto bloodTest = analyzeBlood('o');
     //7)
     playInBand();
     //8)
-    auto tuneUp = tuneInstrument(657, true);
+    auto tuneUp = tuneInstrument(7, true);
     //9)
-    auto playChords = identifyChord('D', true, 13);
+    auto playChords = identifyChord('D', true);
     //10)
     auto mathProblem = subtraction(8, 2);
     
