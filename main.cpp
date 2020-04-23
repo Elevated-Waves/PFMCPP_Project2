@@ -70,21 +70,23 @@ void variableDeclarations()
     
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    int numbers = 5; ignoreUnused(numbers);
-    int ratio = 7;  ignoreUnused(ratio);
-    int fraction = 9; ignoreUnused(fraction);
-    bool truth = 1; ignoreUnused(truth);
-    bool faux = 3; ignoreUnused(faux);
-    bool off = 6; ignoreUnused(off);
-    char name = 8; ignoreUnused(name);
-    char gender = 2; ignoreUnused(gender);
-    char person = 4; ignoreUnused(person);
-    float height = 23; ignoreUnused(height);
-    float length = 25; ignoreUnused(length);
-    float area = 27;ignoreUnused(area);
-    double weight = 29; ignoreUnused(weight);
-    double frequency = 22; ignoreUnused(frequency);
-    double waves = 24; ignoreUnused(waves);
+    int numbers = 5;
+    int ratio = 7;
+    int fraction = 9;
+    bool truth = true;
+    bool faux = false;
+    bool off = true;
+    char name = 'n';
+    char gender = 'h';
+    char person = 'l';
+    float height = 23.5f;
+    float length = 25.9f;
+    float area = 27.1f;
+    double weight = 29;
+    double frequency = 22;
+    double waves = 24; 
+
+    ignoreUnused(numbers, ratio, fraction, truth, faux, off, name, gender, person, height, length, area, weight, frequency, waves);
 }
 /*
  10 functions
@@ -201,16 +203,8 @@ int main()
     //10)
     auto mathProblem = subtraction(8, 2);
     
-    ignoreUnused(brokeUp);
-    ignoreUnused(addUp);
-    ignoreUnused(soccerTeam);
-    ignoreUnused(casualClothes);
-    ignoreUnused(dorianScale);
-    ignoreUnused(bloodTest);
-    ignoreUnused(tuneUp);
-    ignoreUnused(playChords);
-    ignoreUnused(mathProblem);
-    ignoreUnused(carRented);
+    ignoreUnused(brokeUp,addUp, soccerTeam, casualClothes, dorianScale, bloodTest, tuneUp, playChords);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
