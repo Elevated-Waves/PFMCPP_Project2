@@ -16,11 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
- 
- 
- 
- 
- 
+ void
+ char
+ bool
+ int
+ float
+ double
  
  
  
@@ -69,6 +70,23 @@ void variableDeclarations()
     
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    int numbers = 5;
+    int ratio = 7;
+    int fraction = 9;
+    bool truth = true;
+    bool faux = false;
+    bool off = true;
+    char name = 'n';
+    char gender = 'h';
+    char person = 'l';
+    float height = 23.5f;
+    float length = 25.9f;
+    float area = 27.1f;
+    double weight = 29;
+    double frequency = 22;
+    double waves = 24; 
+
+    ignoreUnused(numbers, ratio, fraction, truth, faux, off, name, gender, person, height, length, area, weight, frequency, waves);
 }
 /*
  10 functions
@@ -81,72 +99,112 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
-
+int subtraction(int num1, int num2 = 4) 
+{
+    ignoreUnused(num1, num2);
+    return {};
+}
 /*
  2)
  */
-
+bool identifyChord(char chordName, bool quality, int extensions = 13)
+{
+    ignoreUnused(chordName, quality, extensions);
+    return {};
+}
 /*
  3)
  */
-
+bool tuneInstrument(int hertz = 7, bool note = true )
+{
+    ignoreUnused(hertz, note);
+    return {};
+}
 /*
  4)
  */
-
+void playInBand(bool guitar = false, bool bass = true)
+{
+    ignoreUnused(guitar, bass);
+}
 /*
  5)
  */
-
+double analyzeBlood(char bloodType, int bloodCellCount = 2)
+{
+    ignoreUnused(bloodType, bloodCellCount);
+    return {};
+}
 /*
  6)
  */
-
+int writeScale(int semitones, int wholeTones = 4)
+{
+    ignoreUnused(semitones, wholeTones);
+    return {};
+}
 /*
  7)
  */
-
+double buyClothes(int price = 6, bool typeOfClothing = true)
+{
+    ignoreUnused(price, typeOfClothing);
+    return {};
+}
 /*
  8)
  */
-
+bool makeSportsTeam(bool typeOfSport, int numberOfPlayers = 11)
+{
+    ignoreUnused(numberOfPlayers, typeOfSport);
+    return {};
+}
 /*
  9)
  */
-
+int addition(int numbers = 8)
+{
+    ignoreUnused(numbers);
+    return {};
+}
 /*
  10)
  */
-
+bool breakupUltimatum(bool breakup, bool eatIceCream = false)
+{
+    ignoreUnused(breakup, eatIceCream);
+    return {};
+}
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto brokeUp = breakupUltimatum(false, false);
     //2)
-    
+    auto addUp = addition(8);
     //3)
-    
+    auto soccerTeam = makeSportsTeam(true);
     //4)
-    
+    auto casualClothes = buyClothes(12, false);
     //5)
-    
+    auto dorianScale = writeScale(4, 3);
     //6)
-    
+    auto bloodTest = analyzeBlood('o');
     //7)
-    
+    playInBand();
     //8)
-    
+    auto tuneUp = tuneInstrument(7, true);
     //9)
-    
+    auto playChords = identifyChord('D', true);
     //10)
+    auto mathProblem = subtraction(8, 2);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(brokeUp,addUp, soccerTeam, casualClothes, dorianScale, bloodTest, tuneUp, playChords);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
